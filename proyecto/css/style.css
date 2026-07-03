@@ -1,0 +1,351 @@
+/*==========================================
+REVISTA PRESENCIA - ESTILO BASE PROFESIONAL
+==========================================*/
+
+:root{
+
+    --principal:#C1121F;
+    --secundario:#780000;
+    --crema:#F8F5F0;
+    --blanco:#FFFFFF;
+    --texto:#222;
+    --gris:#666;
+    --grisClaro:#ECECEC;
+
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--crema);
+    font-family:'Poppins',sans-serif;
+    color:var(--texto);
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+ul{
+    list-style:none;
+}
+
+/*======================== HEADER ========================*/
+
+header{
+    background:white;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+}
+
+.top-header{
+    width:95%;
+    max-width:1500px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px;
+}
+
+.logo{
+    width:220px;
+}
+
+.logo img{
+    width:100%;
+}
+
+.buscador{
+    width:450px;
+}
+
+.buscador input{
+    width:100%;
+    padding:15px;
+    border-radius:50px;
+    border:2px solid #ddd;
+    font-size:15px;
+    outline:none;
+}
+
+.buscador input:focus{
+    border-color:var(--principal);
+}
+
+.redes{
+    display:flex;
+    gap:18px;
+}
+
+.redes a{
+    font-weight:600;
+}
+
+/*======================== MENU ========================*/
+
+nav{
+    background:var(--principal);
+}
+
+nav ul{
+    max-width:1500px;
+    margin:auto;
+    display:flex;
+    justify-content:center;
+}
+
+nav a{
+    color:white;
+    display:block;
+    padding:18px 22px;
+    transition:.3s;
+}
+
+nav a:hover{
+    background:white;
+    color:var(--principal);
+}
+
+/*======================== BREAKING NEWS ========================*/
+
+.breaking-news{
+    display:flex;
+    align-items:center;
+    background:#111;
+    color:white;
+    height:45px;
+}
+
+.breaking-news span{
+    background:var(--principal);
+    padding:14px 30px;
+    font-weight:bold;
+}
+
+.breaking-news marquee{
+    padding-left:20px;
+}
+
+/*======================== HERO ========================*/
+
+.hero{
+    width:95%;
+    max-width:1500px;
+    margin:40px auto;
+    display:grid;
+    grid-template-columns:2fr 1fr;
+    gap:25px;
+}
+
+.hero-left{
+    position:relative;
+    border-radius:20px;
+    overflow:hidden;
+}
+
+.hero-left img{
+    height:650px;
+    object-fit:cover;
+}
+
+.hero-info{
+    position:absolute;
+    bottom:0;
+    width:100%;
+    padding:40px;
+    background:linear-gradient(to top, rgba(0,0,0,.9), rgba(0,0,0,.1));
+    color:white;
+}
+
+.hero-info h1{
+    font-size:45px;
+    margin:15px 0;
+}
+
+.hero-info p{
+    width:70%;
+    line-height:30px;
+}
+
+.hero-right{
+    display:grid;
+    gap:20px;
+}
+
+.hero-right article{
+    background:white;
+    display:flex;
+    border-radius:15px;
+    overflow:hidden;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.hero-right article:hover{
+    transform:translateY(-5px);
+}
+
+.hero-right img{
+    width:170px;
+    height:140px;
+    object-fit:cover;
+}
+
+.hero-right div{
+    padding:18px;
+}
+
+/*======================== CONTENIDO ========================*/
+
+.contenido{
+    width:95%;
+    max-width:1500px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:3fr 1fr;
+    gap:35px;
+}
+
+/* GRID NOTICIAS */
+
+.grid-noticias{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+}
+
+/* CARD */
+
+.card{
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    transition:.3s;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.card img{
+    height:220px;
+    object-fit:cover;
+}
+
+.card-body{
+    padding:25px;
+}
+
+.categoria{
+    display:inline-block;
+    background:var(--principal);
+    color:white;
+    padding:6px 15px;
+    border-radius:50px;
+    font-size:13px;
+    margin-bottom:15px;
+}
+
+.card-body h3{
+    margin-bottom:15px;
+}
+
+.card-body p{
+    color:var(--gris);
+    line-height:28px;
+}
+
+.leer-mas{
+    display:inline-block;
+    margin-top:20px;
+    color:var(--principal);
+    font-weight:bold;
+}
+
+/*======================== SIDEBAR ========================*/
+
+.sidebar{
+    display:flex;
+    flex-direction:column;
+    gap:25px;
+}
+
+.widget{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+.widget h2{
+    margin-bottom:20px;
+}
+
+.widget li{
+    padding:15px 0;
+    border-bottom:1px solid #eee;
+}
+
+.publicidad img{
+    border-radius:15px;
+}
+
+/*======================== FOOTER ========================*/
+
+footer{
+    margin-top:60px;
+    background:#111;
+    color:white;
+}
+
+.footer-contenedor{
+    max-width:1500px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:40px;
+    padding:60px 20px;
+}
+
+.copyright{
+    text-align:center;
+    padding:20px;
+    background:black;
+}
+
+.breaking-news{
+    display:flex;
+    align-items:center;
+    background:#111;
+    color:white;
+    height:45px;
+    overflow:hidden;
+}
+
+.breaking-news marquee{
+    white-space:nowrap;
+}
+
+.grid-noticias{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(250px, 1fr));
+    gap:25px;
+}

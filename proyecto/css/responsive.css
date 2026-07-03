@@ -1,0 +1,75 @@
+/*===============================
+RESPONSIVE DESIGN
+REVISTA PRESENCIA
+===============================*/
+
+/* TABLET */
+@media (max-width: 1024px){
+
+    .hero{
+        grid-template-columns:1fr;
+    }
+
+    .hero-left img{
+        height:450px;
+    }
+
+    .contenido{
+        grid-template-columns:1fr;
+    }
+
+    .grid-noticias{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .buscador{
+        width:250px;
+    }
+}
+
+/* CELULAR */
+@media (max-width: 768px){
+
+    nav ul{
+        flex-wrap:wrap;
+    }
+
+    nav a{
+        padding:12px;
+        font-size:13px;
+    }
+
+    .top-header{
+        flex-direction:column;
+        gap:15px;
+    }
+
+    .buscador{
+        width:100%;
+    }
+
+    .grid-noticias{
+        grid-template-columns:1fr;
+    }
+
+    .hero-info h1{
+        font-size:28px;
+    }
+
+    .hero-info p{
+        width:100%;
+        font-size:14px;
+    }
+
+    .hero-left img{
+        height:300px;
+    }
+
+    .hero-right{
+        grid-template-columns:1fr;
+    }
+
+    .sidebar{
+        margin-top:30px;
+    }
+}
