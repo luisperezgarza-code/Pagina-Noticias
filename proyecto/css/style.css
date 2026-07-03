@@ -4,7 +4,7 @@ REVISTA PRESENCIA - ESTILO BASE PROFESIONAL
 
 :root{
 
-    --principal:#C1121F;
+    --principal:#2b2f97;
     --secundario:#780000;
     --crema:#F8F5F0;
     --blanco:#FFFFFF;
@@ -25,7 +25,7 @@ html{
 }
 
 body{
-    background:var(--crema);
+    background:var(-- );
     font-family:'Poppins',sans-serif;
     color:var(--texto);
 }
@@ -123,7 +123,7 @@ nav a:hover{
     color:var(--principal);
 }
 
-/*======================== BREAKING NEWS ========================*/
+/*  BREAKING NEWS  */
 
 .breaking-news{
     display:flex;
@@ -143,7 +143,7 @@ nav a:hover{
     padding-left:20px;
 }
 
-/*======================== HERO ========================*/
+/*  HERO  */
 
 .hero{
     width:95%;
@@ -212,7 +212,7 @@ nav a:hover{
     padding:18px;
 }
 
-/*======================== CONTENIDO ========================*/
+/*  CONTENIDO  */
 
 .contenido{
     width:95%;
