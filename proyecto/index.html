@@ -2,6 +2,7 @@
 <html lang="es">
 
 <head>
+    
     <meta name="description" content="Revista Presencia - Noticias de Nuevo León">
 
     <meta charset="UTF-8">
@@ -29,6 +30,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Merriweather:wght@700&display=swap"
           rel="stylesheet">
 
+          <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
 </head>
 
 <body>
@@ -55,13 +59,23 @@
 
         <div class="redes">
 
-            <a href="https://www.facebook.com" target="_blank">Facebook</a>
+    <a href="https://www.facebook.com/RevistaPresenciaMX" target="_blank" title="Facebook">
+        <i class="fab fa-facebook-f"></i>
+    </a>
 
-            <a href="https://www.instagram.com" target="_blank">Instagram</a>
+    <a href="https://www.instagram.com/revistapresencia.mx/" target="_blank" title="Instagram">
+        <i class="fab fa-instagram"></i>
+    </a>
 
-            <a href="https://www.tiktok.com" target="_blank">TikTok</a>
+    <a href="https://x.com/" target="_blank" title="X">
+        <i class="fab fa-x-twitter"></i>
+    </a>
 
-        </div>
+    <a href="https://www.tiktok.com/" target="_blank" title="TikTok">
+        <i class="fab fa-tiktok"></i>
+    </a>
+
+</div>
 
     </div>
 
@@ -114,30 +128,29 @@
 
 <section class="hero">
 
-    <div class="hero-left">
+   <div class="hero-left">
 
-        <img src="img/hero.jpg">
+    <button class="flecha izquierda">&#10094;</button>
+    
+<img id="heroImagen" src="img/foto/hero.jpg">
 
-        <div class="hero-info">
+    <div class="hero-info">
 
-            <span>DESTACADA</span>
+        <span id="heroCategoria">DESTACADA</span>
 
-            <h1>
+        <h1 id="heroTitulo">
+            Título principal de la noticia
+        </h1>
 
-                Título principal de la noticia
-
-            </h1>
-
-            <p>
-
-                Aquí irá una descripción corta
-                de la noticia principal.
-
-            </p>
-
-        </div>
+        <p id="heroDescripcion">
+            Aquí irá una descripción corta de la noticia principal.
+        </p>
 
     </div>
+
+    <button class="flecha derecha">&#10095;</button>
+
+</div>
 
     <div class="hero-right">
 
@@ -335,7 +348,7 @@
 
         <article class="card">
 
-            <img src="img/noticia2.jpg" alt="Noticia">
+            <img src="img/noticia5.jpg" alt="Noticia">
 
             <div class="card-body">
 
@@ -452,6 +465,25 @@
 </footer>
 
 <script src="js/app.js"></script>
+
+
+<div class="barra-publicidad">
+
+<button id="cerrarPublicidad">
+
+<i class="fas fa-times"></i>
+
+</button>
+
+<div class="banner">
+
+<img id="bannerPublicidad"
+
+src="img/publicidad1.jpg">
+
+</div>
+
+</div>
 
 </body>
 

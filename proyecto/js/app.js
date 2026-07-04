@@ -1,73 +1,124 @@
-/*=========================================
-REVISTA PRESENCIA - JS BASE
-=========================================*/
+const noticias = [
 
-/*-------------------------
-1. SCROLL SUAVE EN LINKS
--------------------------*/
-document.querySelectorAll('a[href^="#"]').forEach(link => {
-    link.addEventListener("click", function(e){
-        e.preventDefault();
+{
+categoria:"MONTERREY",
+titulo:"Nuevo proyecto urbano transforma el centro de Monterrey",
+descripcion:"El municipio presentó un plan para modernizar calles, áreas verdes y espacios públicos.",
+imagen:"img/foto/hero.jpg"
+},
 
-        const target = document.querySelector(this.getAttribute("href"));
+{
+categoria:"APODACA",
+titulo:"Inician nuevas inversiones para el municipio",
+descripcion:"Empresas internacionales anuncian nuevas plantas industriales.",
+imagen:"img/noticia1.jpg"
+},
 
-        if(target){
-            target.scrollIntoView({
-                behavior:"smooth"
-            });
-        }
-    });
-});
+{
+categoria:"GUADALUPE",
+titulo:"Más seguridad para las colonias",
+descripcion:"Se incorporan nuevas patrullas y cámaras de vigilancia.",
+imagen:"img/noticia2.jpg"
+},
 
+{
+categoria:"SANTIAGO",
+titulo:"El turismo rompe récord este fin de semana",
+descripcion:"Miles de visitantes llegaron a la presa y al centro histórico.",
+imagen:"img/noticia3.jpg"
+}
 
-/*-------------------------
-2. EFECTO EN HEADER AL HACER SCROLL
--------------------------*/
-window.addEventListener("scroll", () => {
+];
 
-    const header = document.querySelector("header");
+let actual=0;
 
-    if(window.scrollY > 80){
-        header.style.boxShadow = "0 5px 20px rgba(0,0,0,.15)";
-    } else {
-        header.style.boxShadow = "0 5px 20px rgba(0,0,0,.08)";
-    }
+const img=document.getElementById("heroImagen");
+const titulo=document.getElementById("heroTitulo");
+const descripcion=document.getElementById("heroDescripcion");
+const categoria=document.getElementById("heroCategoria");
 
-});
+function mostrarNoticia(i){
 
+img.src=noticias[i].imagen;
 
-/*-------------------------
-3. ANIMACIÓN SIMPLE DE NOTICIAS
--------------------------*/
-const cards = document.querySelectorAll(".card");
+titulo.innerHTML=noticias[i].titulo;
 
-const observer = new IntersectionObserver(entries => {
+descripcion.innerHTML=noticias[i].descripcion;
 
-    entries.forEach(entry => {
+categoria.innerHTML=noticias[i].categoria;
 
-        if(entry.isIntersecting){
-            entry.target.style.opacity = 1;
-            entry.target.style.transform = "translateY(0)";
-        }
+}
 
-    });
+function siguiente(){
 
-}, {
-    threshold:0.2
-});
+actual++;
 
-cards.forEach(card => {
+if(actual>=noticias.length){
 
-    card.style.opacity = 0;
-    card.style.transform = "translateY(30px)";
-    card.style.transition = "0.6s ease";
+actual=0;
 
-    observer.observe(card);
+}
 
-});
+mostrarNoticia(actual);
 
+}
 
-/*-------------------------
-4. MENSAJE DE BIENVENIDA (CONSOLE)
--------------------------*/
-console.log("Revista Presencia cargada correctamente 🚀");
+function anterior(){
+
+actual--;
+
+if(actual<0){
+
+actual=noticias.length-1;
+
+}
+
+mostrarNoticia(actual);
+
+}
+
+document.querySelector(".derecha").onclick=siguiente;
+
+document.querySelector(".izquierda").onclick=anterior;
+
+setInterval(siguiente,5000);
+
+mostrarNoticia(actual);
+
+const cerrar=document.getElementById("cerrarPublicidad");
+
+cerrar.onclick=function(){
+
+document.querySelector(".barra-publicidad").style.display="none";
+
+};
+
+const banners=[
+
+"img/publicidad/publicidad1.jpg",
+
+"img/publicidad/publicidad2.jpg",
+
+"img/publicidad/publicidad3.jpg",
+
+"img/publicidad/publicidad4.jpg"
+
+];
+
+let bannerActual=0;
+
+const banner=document.getElementById("bannerPublicidad");
+
+setInterval(()=>{
+
+bannerActual++;
+
+if(bannerActual>=banners.length){
+
+bannerActual=0;
+
+}
+
+banner.src=banners[bannerActual];
+
+},8000);
